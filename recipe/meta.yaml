@@ -17,17 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools-scm
   run:
     - asdf >=2.8.0
     - asdf-coordinates-schemas
     - asdf-transform-schemas >=0.2.2
-    - astropy
+    - astropy >= 5.0.4
     - importlib-resources >=3
     - numpy
     - packaging >=16.0
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
