@@ -23,7 +23,7 @@ requirements:
     - asdf >=2.8.0
     - asdf-coordinates-schemas
     - asdf-transform-schemas >=0.2.2
-    - astropy >= 5.0.4
+    - astropy >=5.0.4
     - importlib-resources >=3
     - numpy
     - packaging >=16.0
