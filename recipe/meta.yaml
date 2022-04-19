@@ -41,7 +41,7 @@ about:
   home: https://github.com/astropy/asdf-astropy
   summary: ASDF serialization support for astropy
   license: BSD-3-Clause
-  license_file: licenses/LICENSE.rst
+  license_file: LICENSE.rst
 
 extra:
   recipe-maintainers:
