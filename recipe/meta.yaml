@@ -1,13 +1,13 @@
 {% set name = "asdf-astropy" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/asdf_astropy-{{ version }}.tar.gz
-  sha256: 7b083864634daf11771d79772b2c2f93efb447fc700bb13ec0e92505b68ae5be
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 462b674601fe2c4a2f45c92bed3e21effd0d58addc7ec4335c545118bc582eb6
 
 build:
   noarch: python
