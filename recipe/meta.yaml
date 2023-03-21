@@ -25,7 +25,7 @@ requirements:
     - asdf-transform-schemas >=0.2.2
     - astropy >=5.0.4
     - importlib-resources >=3
-    - numpy >= 1.20
+    - numpy >=1.20
     - packaging >=19.0
     - python >=3.8
 
