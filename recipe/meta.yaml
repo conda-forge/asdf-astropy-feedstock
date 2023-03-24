@@ -21,11 +21,11 @@ requirements:
     - setuptools-scm
   run:
     - asdf >=2.13
-    - asdf-coordinates-schemas >= 0.2
+    - asdf-coordinates-schemas >=0.2
     - asdf-transform-schemas >=0.2.2
     - astropy >=5.0.4
     - importlib-resources >=3
-    - numpy >= 1.20
+    - numpy >=1.20
     - packaging >=16.0
     - python >=3.8
 
