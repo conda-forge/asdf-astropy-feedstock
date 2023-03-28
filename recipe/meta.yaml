@@ -33,7 +33,7 @@ test:
   imports:
     - asdf_astropy
   commands:
-    - pytest
+    - pytest --pyargs asdf_astropy
   requires:
     - pytest-astropy
     - scipy
