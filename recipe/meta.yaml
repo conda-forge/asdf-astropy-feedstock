@@ -33,9 +33,10 @@ test:
   imports:
     - asdf_astropy
   commands:
-    - pip check
+    - pytest
   requires:
-    - pip
+    - pytest-astropy
+    - scipy
 
 about:
   home: https://github.com/astropy/asdf-astropy
