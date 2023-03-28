@@ -1,13 +1,13 @@
 {% set name = "asdf-astropy" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/asdf_astropy-{{ version }}.tar.gz
-  sha256: 7b083864634daf11771d79772b2c2f93efb447fc700bb13ec0e92505b68ae5be
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 462b674601fe2c4a2f45c92bed3e21effd0d58addc7ec4335c545118bc582eb6
 
 build:
   noarch: python
@@ -20,12 +20,12 @@ requirements:
     - python >=3.8
     - setuptools-scm
   run:
-    - asdf >=2.8.0
-    - asdf-coordinates-schemas
+    - asdf >=2.13
+    - asdf-coordinates-schemas >=0.2
     - asdf-transform-schemas >=0.2.2
     - astropy >=5.0.4
     - importlib-resources >=3
-    - numpy
+    - numpy >=1.20
     - packaging >=16.0
     - python >=3.8
 
@@ -33,9 +33,10 @@ test:
   imports:
     - asdf_astropy
   commands:
-    - pip check
+    - pytest --pyargs asdf_astropy
   requires:
-    - pip
+    - pytest-astropy
+    - scipy
 
 about:
   home: https://github.com/astropy/asdf-astropy
