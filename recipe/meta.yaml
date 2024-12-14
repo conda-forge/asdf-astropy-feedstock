@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "asdf-astropy" %}
 {% set version = "0.7.0" %}
 
@@ -6,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: c981754e10145439de3cc6808ffb3101ef055d0b3164742c72f44b0b2b5c0525
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - asdf >=2.14.4
@@ -27,7 +28,7 @@ requirements:
     - astropy >=5.2.0
     - numpy >=1.24
     - packaging >=19
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -38,6 +39,7 @@ test:
   requires:
     - pytest-astropy
     - scipy
+    - python {{ python_min }}
 
 about:
   home: https://github.com/astropy/asdf-astropy
